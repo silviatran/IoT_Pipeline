@@ -43,10 +43,6 @@ IoT_Pipeline/
 ├── README.md # This file
 ├── requirements.txt # Required Python packages
 
-yaml
-Copy
-Edit
-
 ---
 
 ## How to Run the Project
@@ -57,108 +53,109 @@ Edit
 2. In Terminal 1, activate your virtual environment and run the server:
    ```bash
    python server.py
-Input localhost for the server IP.
 
-Input 12345 for the port.
+- Input localhost for the server IP.
 
-In Terminal 2, run the client:
+- Input 12345 for the port.
 
-bash
-Copy
-Edit
-python client.py
-Input localhost for the server IP.
+3. In Terminal 2, run the client:
 
-Input 12345 for the port.
+    ```bash
+    python client.py
 
-Enter one of the supported queries. To exit, type quit.
+- Input localhost for the server IP.
 
-If Running on Two VMs
-SSH into each VM (Client and Server).
+- Input 12345 for the port.
 
-On the server VM, run:
+4. Enter one of the supported queries. To exit, type quit.
 
-bash
-Copy
-Edit
-python server.py
-Input 0.0.0.0 for the server IP.
 
-Use the port number you configured (e.g., 12345).
+### If Running on Two VMs
 
-On the client VM, run:
+1. SSH into each VM (Client and Server).
 
-bash
-Copy
-Edit
-python client.py
-Input the public IP of the server VM.
+2. On the server VM, run:
 
-Use the same port number.
+    ```bash
+    python server.py
 
-Use the client to send queries. Type quit to close the session.
+    - Input 0.0.0.0 for the server IP.
 
-Requirements
-Install dependencies:
+    - Use the port number you configured (e.g., 12345).
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Features
-Query Validation: Only supports specific queries; all others are rejected politely.
+3. On the client VM, run:
 
-Database Integration: Uses an SQLite database with IoT sensor readings.
+    ```bash
+    python client.py
 
-Metadata Awareness: Leverages metadata from dataniz.com to filter, organize, and process data based on device type, time zone, and measurement units.
+- Input the public IP of the server VM.
 
-Unit Conversion: Converts:
+- Use the same port number.
 
-Moisture → Relative Humidity (RH%)
+4. Use the client to send queries. Type quit to close the session.
 
-Time → PST
+## Requirements
+- Install dependencies:
 
-Volume → Gallons
+    ```bash
+    pip install -r requirements.txt
 
-Power → kWh
+## Features
+- **Query Validation**: Only supports specific queries; all others are rejected politely.
 
-Devices & Metadata
+- Database Integration: Uses an SQLite database with IoT sensor readings.
+
+- Metadata Awareness: Leverages metadata from dataniz.com to filter, organize, and process data based on device type, time zone, and measurement units.
+
+- Unit Conversion: Converts:
+
+    - Moisture → Relative Humidity (RH%)
+
+    - Time → PST
+
+    - Volume → Gallons
+
+    - Power → kWh
+
+
+## Devices & Metadata
+
 This system simulates and supports:
 
-2 Smart Refrigerators (moisture, electricity usage)
+- 2 Smart Refrigerators (moisture, electricity usage)
 
-1 Smart Dishwasher (water usage, electricity usage)
+- 1 Smart Dishwasher (water usage, electricity usage)
 
-Metadata includes:
+### Metadata includes:
 
-Device ID
+- Device ID
 
-Time zone
+- Time zone
 
-Data type and units
+- Data type and units
 
-Location
+- Location
 
 If metadata was not used for specific functionality, reasoning is provided in the report.
 
-Authors
-Group Members: [Your Name], [Partner Name]
+## Authors
 
-Course: CECS 327 - Intro to Networks and Distributed Systems
+- Group Members: Silvia Tran, Isabella Alvarez
 
-Professor: [Instructor Name]
+- Course: CECS 327 - Intro to Networks and Distributed Systems
 
-Notes
-Queries are processed in PST and displayed in imperial units.
+- Professor: Malik Luti
 
-To reset the database, re-import the original .db file or reconfigure your sensors in Dataniz.
+## Notes
 
-Testing Tips
-Try submitting each of the three supported queries to see real-time output.
+- Queries are processed in PST and displayed in imperial units.
 
-Monitor the server terminal for received data and logs.
+- To reset the database, re-import the original .db file or reconfigure your sensors in Dataniz.
 
-Use quit to exit cleanly and close the connection.
+## Testing Tips
 
-Feedback
-We have provided detailed feedback on our experience using Dataniz in the final report, along with suggested improvements.
+- Try submitting each of the three supported queries to see real-time output.
+
+- Monitor the server terminal for received data and logs.
+
+- Use quit to exit cleanly and close the connection.
