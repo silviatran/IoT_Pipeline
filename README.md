@@ -34,14 +34,14 @@ Any other input will return a helpful error message listing the allowed queries.
 
 ## Project Structure
 
-IoT_Pipeline/
-├── client.py # TCP client program
-├── server.py # TCP server program with database and metadata logic
-├── db/
-│ └── iot_data.db # Preloaded IoT database (from Assignment 7)
-├── metadata.json # Device metadata (from dataniz)
-├── README.md # This file
-├── requirements.txt # Required Python packages
+IoT_Pipeline/  
+├── client.py # TCP client program  
+├── server.py # TCP server program with database and metadata logic  
+├── db/  
+│ └── iot_data.db # Preloaded IoT database (from Assignment 7)  
+├── metadata.json # Device metadata (from dataniz)  
+├── README.md # This file  
+├── requirements.txt # Required Python packages  
 
 ---
 
