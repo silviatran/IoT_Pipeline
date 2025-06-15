@@ -79,9 +79,9 @@ IoT_Pipeline/
     ```bash
     python server.py
 
-    - Input 0.0.0.0 for the server IP.
+- Input 0.0.0.0 for the server IP.
 
-    - Use the port number you configured (e.g., 12345).
+- Use the port number you configured (e.g., 12345).
 
 3. On the client VM, run:
 
